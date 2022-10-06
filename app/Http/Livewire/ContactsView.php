@@ -45,6 +45,15 @@ class ContactsView extends Component
     }
 
     public function updateContact() {
+
+        $this->validate([
+            'contact.title' => 'required',
+            'contact.first_name' => 'required',
+            'contact.last_name' => 'required',
+            'contact.mobile' => 'required',
+            'contact.company_name' => 'required',
+        ]);
+        
         Contact::where('id', $this->contact['id'])
         ->update([
             'title' => $this->contact['title'],

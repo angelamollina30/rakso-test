@@ -52,31 +52,31 @@
                         <div class="form-group col-12">
                             <label> Title </label>
                             <input type="text" class="form-control"  wire:model.defer="contact.title"   value=""  />
-                            @error('title')
+                            @error('contact.title')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="form-group col-12">
                             <label> First Name </label>
                             <input type="text" class="form-control"  wire:model.defer="contact.first_name"   value=""  />
-                            @error('first_name')
+                            @error('contact.first_name')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="form-group col-12">
                             <label> Last Name </label>
                             <input type="text" class="form-control"  wire:model.defer="contact.last_name"   value=""  />
-                            @error('last_name')
+                            @error('contact.last_name')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="form-group col-12">
                             <label> Mobile </label>
                             <input type="text" class="form-control"  wire:model.defer="contact.mobile"   value=""  />
-                            @error('mobile')
+                            @error('contact.mobile')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="form-group col-12">
                             <label> Company </label>
                             <input type="text" class="form-control"  wire:model.defer="contact.company_name"   value=""  />
-                            @error('mobile')
+                            @error('contact.company_name')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
 
