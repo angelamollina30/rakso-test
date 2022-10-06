@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/import', [App\Http\Controllers\HomeController::class, 'import'])->name('import');
-Route::post('/delete/{id}', [App\Http\Controllers\HomeController::class, 'import'])->name('delete');
+Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');

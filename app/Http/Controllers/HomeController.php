@@ -31,6 +31,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function delete($id) {
+        Contact::where('id', $id)->delete();
+        session()->flash('message', "Success Deletion");
+        return redirect()->route('home');
+    }
+
     public function import() {
 
         // dd($request->file('fileData'));

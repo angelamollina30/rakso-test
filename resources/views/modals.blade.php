@@ -75,7 +75,7 @@
                         </div>
                         <div class="form-group col-12">
                             <label> Company </label>
-                            <input type="text" class="form-control"  wire:model.defer="contact.company"   value=""  />
+                            <input type="text" class="form-control"  wire:model.defer="contact.company_name"   value=""  />
                             @error('mobile')
                             <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
@@ -85,7 +85,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               
-                <button type="button" wire:click.prevent="importContacts()" class="btn btn-success">Upload</button>
+                <button type="button" wire:click.prevent="updateContact" class="btn btn-success">Update</button>
                 </form>
             </div>
         </div>

@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/contacts/create',[App\Http\Controllers\ApiController::class, 'create'])->name('api.create-contact');
-    Route::post('/contacts/destroy/{id}',[App\Http\Controllers\HomeController::class, 'index'])->name('api.destroy-contact');
-    Route::post('/contacts/update/{id}',[App\Http\Controllers\HomeController::class, 'index'])->name('api.update-contact');
-    Route::post('/contacts/display',[App\Http\Controllers\HomeController::class, 'index'])->name('api.display-contact');
+    Route::get('/contacts/destroy/{id}',[App\Http\Controllers\ApiController::class, 'destroy'])->name('api.destroy-contact');
+    Route::get('/contacts/update/{id}',[App\Http\Controllers\ApiController::class, 'update'])->name('api.update-contact');
+    Route::post('/contacts/display',[App\Http\Controllers\ApiController::class, 'display'])->name('api.display-contact');
 });
