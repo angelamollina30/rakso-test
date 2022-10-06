@@ -6,6 +6,7 @@ use App\Models\Contact;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithStartRow;
+use Illuminate\Support\Collection;
 class ImportContacts implements ToCollection,WithStartRow
 {
     /**
@@ -13,7 +14,8 @@ class ImportContacts implements ToCollection,WithStartRow
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
-    public function collection(collection $rows)
+
+    public function collection(Collection $rows)
     {
 
         foreach($rows as $row) {
