@@ -37,10 +37,8 @@ class HomeController extends Controller
         if(request()->file('fileData')) {
             Excel::import(new importContacts, request()->file('fileData'));
             session()->flash('message', "Success Import File");
-            $this->dispatchBrowserEvent("hideContactImport");
             return redirect()->route('home');
         } else {
-            $this->dispatchBrowserEvent("hideContactImport");
             session()->flash('message', 'No file!');
             return redirect()->route('home');
         }
