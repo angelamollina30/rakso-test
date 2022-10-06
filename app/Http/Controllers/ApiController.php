@@ -18,6 +18,14 @@ class ApiController extends Controller
 
     public function update(Request $request, $id) {
 
+        $this->validate($request,[
+            'title' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'mobile' => 'required',
+            'company_name' => 'required',
+        ]);
+        
         $contact = Contact::findOrFail($id);
         $contact->title = $request->input('title');
         $contact->first_name = $request->input('first_name');
