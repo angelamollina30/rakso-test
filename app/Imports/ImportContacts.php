@@ -13,6 +13,7 @@ class ImportContacts implements ToCollection,WithStartRow
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
+    use Importable;
     public function collection(collection $rows)
     {
 
@@ -30,5 +31,9 @@ class ImportContacts implements ToCollection,WithStartRow
         return "success";
 
         
+    }
+
+    public function startRow(): int {
+        return 2;
     }
 }
